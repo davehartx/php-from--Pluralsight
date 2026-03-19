@@ -84,6 +84,7 @@
                     <br>Role: %s
                     <br>Color: %s
                     <br>Language(s): %s
+                    <br>wromhLanguage(s): %s
                     <br>Comments: %s
                     <br>T&amp;C: %s</p>',
                     htmlspecialchars($name),
@@ -91,6 +92,8 @@
                     htmlspecialchars($role),
                     htmlspecialchars($color),
                     htmlspecialchars(implode(' ', $languages)),/* */
+                    htmlspecialchars($languages),/* */
+                    htmlspecialchars($comments),/* */
                     htmlspecialchars($tc)
                     );
                 } else {
