@@ -77,9 +77,9 @@
                     $tc = $_POST['tc'];
                 };
 // so if the is true  then  ..
-  /* the values from line 88 are strings each added here */ 
+ 
                 if ($ok) {
-                    printf('<p>User name: %s 
+                    printf('<p>User name: %s  /* the values from line 88 are strings each added here */ 
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s
@@ -90,7 +90,7 @@
                     htmlspecialchars($password),
                     htmlspecialchars($role),
                     htmlspecialchars($color),
-                    htmlspecialchars(implode(' ', $languages)),/* */
+                    htmlspecialchars(implode(' ', $languages)),/*  this is a arrange and  just $languages barfs   */
                     htmlspecialchars($comments),/* */
                     htmlspecialchars($tc)
                     );
