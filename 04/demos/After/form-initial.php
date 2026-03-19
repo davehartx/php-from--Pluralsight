@@ -27,42 +27,42 @@
         </nav>
     </div>
 
-    <div id="registration-form" class="ms-3 me-3">
+    <div id="registration-form" class="ms-3 me-3"> 
         <h1 class="mt-4">Registration</h1>
-        <form action="" method="post">
+        <form action="" method="post">    <!--the "" bit returns same page.Method , how to send? Usually  post  (part of the BODY of the http request Uses  $_POST array) or get ( for retriving info and appended to url, limited  tho Uses  $_GET array )     -->
+<!--   https://html.spec.whatwg.org/#states-of-the-type-attribute      list the different types of imput ,  -->
             <div class="mb-3">
-                User name: <input type="text" name="name" class="form-control">
+                User name: <input type="text" name="name" class="form-control">  <!--  takes  user name   , as type  text    -->
             </div>
-            <div class="mb-3">
-                Password: <input type="password" name="password" class="form-control">
+            <div class="mb-3"> 
+                Password: <input type="password" name="password" class="form-control"> <!--  takes  user name   , as type  passwd    -->
             </div>
             <div class="mb-3">
                 Role:
-                <input type="radio" name="role" value="b" class="form-check-input"> buyer
-                <input type="radio" name="role" value="s" class="form-check-input"> seller
-            </div>
+                <input type="radio" name="role" value="b" class="form-check-input"> buyer <!--  takes  role by radio input type   value b    -->
+                <input type="radio" name="role" value="s" class="form-check-input"> seller <!--  takes  role by radio input typetype   value s   -->
+            </div><!--  to the name part will return whichever  value is box is selected -->
             <div class="mb-3">
                 Favorite color:
                 <select name="color" class="form-select">
                     <option value="">Please select</option>
                     <option value="#f00">red</option>
                     <option value="#0f0">green</option>
-                    <option value="#00f">blue</option>
-                </select>
+                    <option value="#00f">blue</option> <!-- options here mean only 1 can be selected and color is retruned   -->
             </div>
             <div class="mb-3">
                 Languages spoken:
-                <select name="languages[]" multiple size="3" class="form-select">
+                <select multiple name="languages[]"  size="3" class="form-select"><!--   is the array ( multiple values), name needs to be [],  called back with $_POST['languages']  in this example -->
                     <option value="en">English</option>
                     <option value="fr">French</option>
-                    <option value="it">Italian</option>
+                    <option value="it">Italian</option> <!-- options here means multiple  selections are retruned   -->
                 </select>
             </div>
             <div class="mb-3">
-                Comments: <textarea name="comments" class="form-control"></textarea>
+                Comments: <textarea name="comments" class="form-control"></textarea><!--textarea allows for multiple line as return comment value -->
             </div>
             <div class="mb-3">
-                <input type="checkbox" name="tc" value="ok" class="form-check-input">
+                <input type="checkbox" name="tc" value="ok" class="form-check-input"> <!--  for checkbox tc set to ok  .. if selected  -->
                 I accept the T&amp;C
             </div>
             <div class="mb-5">
