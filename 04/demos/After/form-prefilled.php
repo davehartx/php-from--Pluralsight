@@ -28,39 +28,39 @@
     </div>
 
     <div id="registration-form" class="ms-3 me-3 mt-4">
-        <?php
-            $name = '';
+        <?php   //  so this will check if vales are set , and reurn if they ALL are
+            $name = '';   // set variables to nothing at the start
             $password = '';
             $role = '';
             $color = '';
             $languages = [];
             $comments = '';
-            $tc = '';
+            $tc = '';   // end of  ..set variables to nothing at the start
 
-            if (isset($_POST['submit'])) {
+            if (isset($_POST['submit'])) {   // so run through all and goes false if any a still unset 
                 $ok = true;
 
-                if (!isset($_POST['name']) || $_POST['name'] === '') {
+                if (!isset($_POST['name']) || $_POST['name'] === '') {  // !isset  ( is not isset ) || ===  is blank ?  then falses
                     $ok = false;
                 } else {
-                    $name = $_POST['name'];
+                    $name = $_POST['name'];           //  otherwise   $_POST['name'  set  $name , for later
                 };
-                if (!isset($_POST['password']) || $_POST['password'] === '') {
+                if (!isset($_POST['password']) || $_POST['password'] === '') { //same  as 40
                     $ok = false;
                 } else {
                     $password = $_POST['password'];
                 };
-                if (!isset($_POST['role']) || $_POST['role'] === '') {
+                if (!isset($_POST['role']) || $_POST['role'] === '') {  //same  as 40
                     $ok = false;
                 } else {
                     $role = $_POST['role'];
                 };
-                if (!isset($_POST['color']) || $_POST['color'] === '') {
+                if (!isset($_POST['color']) || $_POST['color'] === '') { //same  as 40
                     $ok = false;
                 } else {
                     $color = $_POST['color'];
                 };
-                if (!isset($_POST['languages']) || !is_array($_POST['languages']) ||
+                if (!isset($_POST['languages']) || !is_array($_POST['languages']) ||  // !isset , not set and not is_array or counts in array is 0
                     count($_POST['languages']) === 0) {
                     $ok = false;
                 } else {
@@ -76,9 +76,9 @@
                 } else {
                     $tc = $_POST['tc'];
                 };
-
+// so if the is true  then  ..
                 if ($ok) {
-                    printf('<p>User name: %s
+                    printf('<p>User name: %s   /* test */ 
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s

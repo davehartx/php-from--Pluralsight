@@ -30,10 +30,10 @@
     <div id="search-form" class="ms-3 me-3">
         <h1 class="mt-4">Search</h1>
         <?php
-            if (isset($_POST['searchterm'])) {  // checks to see if search term exist , , this does nothing other than WEED out SQL injections
+            if (isset($_POST['searchterm'])) {  // checks to see if search term exists with isset  , then checks  whatever lands in line40 , , this does nothing other than WEED out SQL injections
                 // run search
-                echo 'Ha Ha Your search for \'' . htmlspecialchars($_POST['searchterm']) . '\' returned 0 results.'; // htmlspecialchars convert any nasty <br>  styple hyper text to just as it appears .
-            }
+                echo 'Ha Ha Your search for \'' . htmlspecialchars($_POST['searchterm']) . '\' returned 0 results.'; // htmlspecialchars convert any nasty <br>  style hyper text to just as it appears .
+            }   //   doing this avoid cross-site scripting  ( xss) We will re-used 
         ?>
         <form action="" method="post">
             <div class="mb-3">
