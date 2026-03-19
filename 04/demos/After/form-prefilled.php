@@ -83,7 +83,6 @@
                     <br>Role: %s
                     <br>Color: %s
                     <br>Language(s): %s
-                    <br>wrong Language(s): %s
                     <br>Comments: %s
                     <br>T&amp;C: %s</p>',
                     htmlspecialchars($name),
@@ -91,7 +90,6 @@
                     htmlspecialchars($role),
                     htmlspecialchars($color),
                     htmlspecialchars(implode(' ', $languages)),/* */
-                    htmlspecialchars($languages),
                     htmlspecialchars($tc)
                     );
                 } else {
