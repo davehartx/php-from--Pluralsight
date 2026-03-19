@@ -78,19 +78,20 @@
                 };
 // so if the is true  then  ..
                 if ($ok) {
-                    printf('<p>User name: %s   /* test */ 
+                    printf('<p>User name: %s   /* the values from line 88 are strings each added here */ 
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s
                     <br>Language(s): %s
+                    <br>wrong Language(s): %s
                     <br>Comments: %s
                     <br>T&amp;C: %s</p>',
                     htmlspecialchars($name),
                     htmlspecialchars($password),
                     htmlspecialchars($role),
                     htmlspecialchars($color),
-                    htmlspecialchars(implode(' ', $languages)),
-                    htmlspecialchars($comments),
+                    htmlspecialchars(implode(' ', $languages)),/* */
+                    htmlspecialchars($languages),
                     htmlspecialchars($tc)
                     );
                 } else {
