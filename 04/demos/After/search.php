@@ -30,9 +30,9 @@
     <div id="search-form" class="ms-3 me-3">
         <h1 class="mt-4">Search</h1>
         <?php
-            if (isset($_POST['searchterm'])) {
+            if (isset($_POST['searchterm'])) {  // checks to see if search term exist , , this does nothing other than WEED out SQL injections
                 // run search
-                echo 'Your search for \'' . htmlspecialchars($_POST['searchterm']) . '\' returned 0 results.';
+                echo 'Ha Ha Your search for \'' . htmlspecialchars($_POST['searchterm']) . '\' returned 0 results.'; // htmlspecialchars convert any nasty <br>  styple hyper text to just as it appears .
             }
         ?>
         <form action="" method="post">
