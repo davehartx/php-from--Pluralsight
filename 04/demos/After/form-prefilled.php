@@ -77,8 +77,9 @@
                     $tc = $_POST['tc'];
                 };
 // so if the is true  then  ..
+  /* the values from line 88 are strings each added here */ 
                 if ($ok) {
-                    printf('<p>User name: %s   /* the values from line 88 are strings each added here */ 
+                    printf('<p>User name: %s 
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s
