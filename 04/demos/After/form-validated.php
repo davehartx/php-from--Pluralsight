@@ -46,7 +46,7 @@
                 } else {
                     $name = $_POST['name'];
                 };
-                $regex = '/^\w+@(\w+\.)+\w+$/';  // expression to match dave@bunnies.org
+                $regex = '/^\w+@(\w+\.)+\w+$/';  // expression to match dave@bunnies.org format
                 if (!isset($_POST['email']) || $_POST['email'] === '' || !preg_match($regex, $_POST['email'])) {
                     $ok = false;
                 } else {
@@ -86,6 +86,7 @@
 
                 if ($ok) {  // if $OK  is still true  ,print value//
                     printf('<p>User name: %s
+                    <br>Email: $s 
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s
@@ -93,6 +94,7 @@
                     <br>Comments: %s
                     <br>T&amp;C: %s</p>',
                     htmlspecialchars($name),
+                    htmlspecialchars($email),
                     htmlspecialchars($password),
                     htmlspecialchars($role),
                     htmlspecialchars($color),

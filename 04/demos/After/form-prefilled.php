@@ -137,38 +137,38 @@
                                  value="<?=htmlspecialchars($email)?>">   <!--  so , pre-filled if the value was set previously-->
             </div>
             <div class="mb-3">
-                Password: <input type="password" name="password" class="form-control">
+                Password: <input type="password" name="password" class="form-control">  <!--  so , NOT-prefilled password-->
             </div>
             <div class="mb-3">
                 Role:
                 <input type="radio" name="role" value="b" class="form-check-input"<?php 
                     if ($role === 'b') { 
-                        echo ' checked';
+                        echo ' checked'; // so checked  here mean makie likie it was clicked 
                     }
                 ?>> buyer   <!--  so , pre-filled if  role  he value was set previously-->
                 <input type="radio" name="role" value="s" class="form-check-input"<?php 
                     if ($role === 's') {
-                        echo ' checked'; 
+                        echo ' checked';  // so checked  here mean makie likie it was clicked 
                     }
                 ?>> seller <!--  so , pre-filled if  role  he value was set previously-->
             </div>
             <div class="mb-3">
-                Favorite color:
+                Favourite color:
                 <select name="color" class="form-select">
                     <option value="">Please select</option>
                     <option value="#f00"<?php
                         if ($color === '#f00') {
-                            echo ' selected';
+                            echo ' selected'; // so selected  here mean makie likie it was clicked 
                         }
                     ?>>red</option>
                     <option value="#0f0"<?php
                         if ($color === '#0f0') {
-                            echo ' selected';
+                            echo ' selected'; // so selected  here mean makie likie it was clicked 
                         }
                     ?>>green</option>
                     <option value="#00f"<?php
                         if ($color === '#00f') {
-                            echo ' selected';
+                            echo ' selected'; // so selected  here mean makie likie it was clicked 
                         }
                     ?>>blue</option>
                 </select>
@@ -177,18 +177,18 @@
                 Languages spoken:
                 <select name="languages[]" multiple size="3" class="form-select">
                     <option value="en"<?php
-                        if (in_array('en', $languages)) {
+                        if (in_array('en', $languages)) { // in_array tests if en is in $languages , and echo selected means appears so
                             echo ' selected';
                         }
                     ?>>English</option>
                     <option value="fr"<?php
-                        if (in_array('fr', $languages)) {
+                        if (in_array('fr', $languages)) { // in_array tests if fr is in $languages , and echo selected means appears so
                             echo ' selected';
                         }
                     ?>>French</option>
                     <option value="it"<?php
-                        if (in_array('it', $languages)) {
-                            echo ' selected';
+                        if (in_array('it', $languages)) { // in_array tests if it is in $languages , and echo selected means appears so
+                            echo ' selected';    // so selected  here mean makie likie it was clicked 
                         }
                     ?>>Italian</option>
                 </select>
@@ -199,7 +199,7 @@
             <div class="mb-3">
                 <input type="checkbox" name="tc" value="ok" class="form-check-input"<?php 
                     if ($tc === 'ok') {
-                        echo ' checked';
+                        echo ' checked'; // so checked  here mean makie likie it was clicked 
                     }
                 ?>>
                 I accept the T&amp;C
