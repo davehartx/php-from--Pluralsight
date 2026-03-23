@@ -58,15 +58,15 @@
                     $color = $_POST['color'];
                 };
 
-                if ($ok) { //  so if OK  , we are all to the database that you will need to have set up ..  called php and name role and colour fields already set in table users
-                    $db = mysqli_connect('localhost', 'root', 'Password123', 'php');  // see line69  .. this is used to get to the db
-                    $sql = sprintf(       // see line 69  .. this is used to get to insert in to the db
-                        "INSERT INTO users (name, role, color) VALUES ('%s', '%s', '%s')", // insert data  into db
-                        mysqli_real_escape_string($db, $name),  // < the escape function weed out any nasty sql injected values
-                        mysqli_real_escape_string($db, $role), // < the escape function weed out any nasty sql injected values
-                        mysqli_real_escape_string($db, $color) // < the escape function weed out any nasty sql injected values
-                    );
-                    mysqli_query($db, $sql);   //  this will do the insert from  the lines abve
+                //if ($ok) { //  so if OK  , we are all to the database that you will need to have set up ..  called php and name role and colour fields already set in table users
+                 //   $db = mysqli_connect('localhost', 'root', 'Password123', 'php');  // see line69  .. this is used to get to the db
+                 //   $sql = sprintf(       // see line 69  .. this is used to get to insert in to the db
+                //        "INSERT INTO users (name, role, color) VALUES ('%s', '%s', '%s')", // insert data  into db
+                 //       mysqli_real_escape_string($db, $name),  // < the escape function weed out any nasty sql injected values
+                  //      mysqli_real_escape_string($db, $role), // < the escape function weed out any nasty sql injected values
+                 //       mysqli_real_escape_string($db, $color) // < the escape function weed out any nasty sql injected values
+                 //   );
+                 //  mysqli_query($db, $sql);   //  this will do the insert from  the lines abve
                     // alternative to above  
                     // $stmt = mqsli_prepare (
                     // $db,
@@ -76,7 +76,7 @@
                     // myqli_stmt_bin_param($stmt,'ss',$value1,$value2);    // // ss < stringstring 
                     // msqli_stmt_execute($stmt);      <<  finally to add
                     echo '<p>Registration successful.</p>';
-                    mysqli_close($db);  //   good idea to CLOSE the database  to preserve resources
+                 //   mysqli_close($db);  //   good idea to CLOSE the database  to preserve resources
                 } else {
                     echo '<p>Validation failed.</p>';
                 }
