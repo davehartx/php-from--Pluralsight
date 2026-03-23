@@ -46,7 +46,7 @@
                 } else {
                     $name = $_POST['name'];
                 };
-                $regex = '/^\w+@(\w+\.)+\w+$/'  // expression to match dave@bunnies.org
+                $regex = '/^\w+@(\w+\.)+\w+$/';  // expression to match dave@bunnies.org
                 if (!isset($_POST['email']) || $_POST['email'] === '' || !preg_match($regex, $_POST['email'])) {
                     $ok = false;
                 } else {
