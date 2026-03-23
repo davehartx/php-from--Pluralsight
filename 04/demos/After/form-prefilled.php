@@ -76,7 +76,7 @@
                 } else {
                     $tc = $_POST['tc'];
                 };
-// so if the is true  then  ..
+// so if the is true  then  .. test update
   /*  for printf the values %s  are replaced by from values from  line 89, these  strings are each added here */ 
                 if ($ok) {
                     printf('<p>User name: %s 
@@ -89,8 +89,8 @@
                     htmlspecialchars($name),
                     htmlspecialchars($password),
                     htmlspecialchars($role),
-                    htmlspecialchars($color),
-                    htmlspecialchars(implode(' ', $languages)),/*  this is a arrange and  just $languages barfs   */
+, this is  space separated  this is a arrange and  just $languages barfs   */                    htmlspecialchars($color),
+                    htmlspecialchars(implode(' ', $languages)),/* takes array g and convertsnvers to a string 
                     htmlspecialchars($comments),/* */
                     htmlspecialchars($tc)
                     );
