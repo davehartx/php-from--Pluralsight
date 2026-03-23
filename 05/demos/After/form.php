@@ -69,8 +69,8 @@
                         mysqli_real_escape_string($db, $color) // < the escape function weed out any nasty sql injected values
                     );
                     mysqli_query($db, $sql);   //  this will do the insert from  the lines abve
-                    $x = mysqli_query($db, $sql);
-                    $countrows = mysqli_num_rows($x);
+                  //  $x = mysqli_query($db, $sql);
+                  // $countrows = mysqli_num_rows($x);
                     // alternative to above  
                     // $stmt = mqsli_prepare (
                     // $db,
