@@ -31,19 +31,26 @@
         <?php   //  so this will check if vales are set , and reurn if they ALL are
             $name = '';   // set variables to nothing at the start
             $password = '';
+            $email ='';
             $role = '';
             $color = '';
             $languages = [];
             $comments = '';
             $tc = '';   // end of  ..set variables to nothing at the start
 
-            if (isset($_POST['submit'])) {   // so run through all and goes false if any a still unset 
+            if (isset($_POST['submit'])) {   // so run through all and goes false if any are still unset 
                 $ok = true;
 
                 if (!isset($_POST['name']) || $_POST['name'] === '') {  // !isset  ( is not isset ) || ===  is blank ?  then falses
                     $ok = false;
                 } else {
                     $name = $_POST['name'];           //  otherwise   $_POST['name'  set  $name , for later
+                };
+                $regex = '/^\w+@(\w+\.)+\w+$/';  // expression to match dave@bunnies.org format
+                if (!isset($_POST['email']) || $_POST['email'] === '' || !preg_match($regex, $_POST['email'])) {
+                    $ok = false;
+                } else {
+                    $email = $_POST['email'];
                 };
                 if (!isset($_POST['password']) || $_POST['password'] === '') { //same  as 40
                     $ok = false;
@@ -80,6 +87,7 @@
   /*  for printf the values %s  are replaced by from values from  line 89, these  strings are each added here */ 
                 if ($ok) {
                     printf('<p>User name: %s 
+                    <br>Email: %s
                     <br>Password: %s
                     <br>Role: %s
                     <br>Color: %s
@@ -87,6 +95,7 @@
                     <br>Comments: %s
                     <br>T&amp;C: %s</p>',
                     htmlspecialchars($name),
+                    htmlspecialchars($email),
                     htmlspecialchars($password),
                     htmlspecialchars($role),
                     htmlspecialchars($color),
@@ -107,20 +116,24 @@
                                  value="<?=htmlspecialchars($name)?>">
             </div>
             <div class="mb-3">
+                Email: <input type="text" name="email" class="form-control"
+                                 value="<?=htmlspecialchars($email)?>">   <!--  so , pre-filled if the value was set previously-->
+            </div>
+            <div class="mb-3">
                 Password: <input type="password" name="password" class="form-control">
             </div>
             <div class="mb-3">
                 Role:
                 <input type="radio" name="role" value="b" class="form-check-input"<?php 
-                    if ($role === 'b') {
+                    if ($role === 'b') { 
                         echo ' checked';
                     }
-                ?>> buyer
+                ?>> buyer   <!--  so , pre-filled if  role  he value was set previously-->
                 <input type="radio" name="role" value="s" class="form-check-input"<?php 
                     if ($role === 's') {
-                        echo ' checked';
+                        echo ' checked'; 
                     }
-                ?>> seller
+                ?>> seller <!--  so , pre-filled if  role  he value was set previously-->
             </div>
             <div class="mb-3">
                 Favorite color:
