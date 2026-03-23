@@ -105,7 +105,7 @@
                 User name: <input type="text" name="name" class="form-control">
             </div>
             <div class="mb-3">
-                User name: <input type="text" name="email" class="form-control">
+                Email Address: <input type="text" name="email" class="form-control">
             </div>
             <div class="mb-3">
                 Password: <input type="password" name="password" class="form-control">
