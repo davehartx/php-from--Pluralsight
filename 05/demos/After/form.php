@@ -78,8 +78,9 @@
                     // myqli_stmt_bin_param($stmt,'ss',$value1,$value2);    // // ss < stringstring 
                     // msqli_stmt_execute($stmt);      <<  finally to add
                     echo '<p>Registration successful   .</p>';
-                    printf('<p>Rows COunt: %s',
-                    htmlspecialchars($countrows));
+                    printf('<p>Rows Count: %s</p>',
+                    htmlspecialchars($countrows)
+                    );
                     mysqli_close($db);  //   good idea to CLOSE the database  to preserve resources
                 } else {
                     echo '<p>Validation failed.</p>';
