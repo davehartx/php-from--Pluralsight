@@ -89,8 +89,8 @@
                     htmlspecialchars($name),
                     htmlspecialchars($password),
                     htmlspecialchars($role),
-, this is  space separated  this is a arrange and  just $languages barfs   */                    htmlspecialchars($color),
-                    htmlspecialchars(implode(' ', $languages)),/* takes array g and convertsnvers to a string 
+                    htmlspecialchars($color),
+                    htmlspecialchars(implode(' ', $languages)),/* takes array  and converts  to a string , this is  space separated  this is a arrange and  just $languages barfs   */ 
                     htmlspecialchars($comments),/* */
                     htmlspecialchars($tc)
                     );
