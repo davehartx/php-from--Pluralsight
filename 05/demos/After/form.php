@@ -67,6 +67,8 @@
                         mysqli_real_escape_string($db, $color) // < the escape function weed out any nasty sql injected values
                     );
                     mysqli_query($db, $sql);   //  this will do the insert from  the lines abve
+                    $x = mysqli_query($db, $sql);
+                    $countrows = mysqli_num_rows($x);
                     // alternative to above  
                     // $stmt = mqsli_prepare (
                     // $db,
@@ -75,7 +77,9 @@
                     //  populate the placeholders with 
                     // myqli_stmt_bin_param($stmt,'ss',$value1,$value2);    // // ss < stringstring 
                     // msqli_stmt_execute($stmt);      <<  finally to add
-                    echo '<p>Registration successful.</p>';
+                    echo '<p>Registration successful   .</p>';
+                    printf('<p>Rows COunt: %s',
+                    htmlspecialchars($countrows));
                     mysqli_close($db);  //   good idea to CLOSE the database  to preserve resources
                 } else {
                     echo '<p>Validation failed.</p>';
