@@ -46,7 +46,7 @@
                 } else {
                     $name = $_POST['name'];
                 };
-               if (!isset($_POST['email']) || $_POST['email'] === '') { // if value !isset or blank
+                if (!isset($_POST['email']) || $_POST['email'] === '') { // if value !isset or blank
                     $ok = false;
                 } else {
                     $name = $_POST['email'];
