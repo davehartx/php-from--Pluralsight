@@ -30,7 +30,6 @@
     <div id="registration-form" class="ms-3 me-3 mt-4">
         <?php
             $name = '';
-            $email = '';
             $password = '';
             $role = '';
             $color = '';
@@ -45,11 +44,6 @@
                     $ok = false;
                 } else {
                     $name = $_POST['name'];
-                };
-                if (!isset($_POST['email']) || $_POST['email'] === '') { // if value !isset or blank
-                    $ok = false;
-                } else {
-                    $name = $_POST['email'];
                 };
                 if (!isset($_POST['password']) || $_POST['password'] === '') { // if value !isset or blank
                     $ok = false;
@@ -111,7 +105,7 @@
                 User name: <input type="text" name="name" class="form-control">
             </div>
             <div class="mb-3">
-                Email address : <input type="text" name="email" class="form-control">
+                User name: <input type="text" name="name" class="form-control">
             </div>
             <div class="mb-3">
                 Password: <input type="password" name="password" class="form-control">
