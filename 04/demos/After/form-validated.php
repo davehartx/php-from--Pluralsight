@@ -30,54 +30,60 @@
     <div id="registration-form" class="ms-3 me-3 mt-4">
         <?php
             $name = '';
+            $email = '';
             $password = '';
             $role = '';
             $color = '';
             $languages = [];
             $comments = '';
             $tc = '';
-
+//   you can you alternatiev validation methos such as JavaScript or modern HTML  markup options ( require)
             if (isset($_POST['submit'])) {
-                $ok = true;
+                $ok = true; // we start with working , OK is true and see if it fails
 
-                if (!isset($_POST['name']) || $_POST['name'] === '') {
+                if (!isset($_POST['name']) || $_POST['name'] === '') { // if value !isset or blank
                     $ok = false;
                 } else {
                     $name = $_POST['name'];
                 };
-                if (!isset($_POST['password']) || $_POST['password'] === '') {
+               if (!isset($_POST['email']) || $_POST['email'] === '') { // if value !isset or blank
+                    $ok = false;
+                } else {
+                    $name = $_POST['email'];
+                };
+                if (!isset($_POST['password']) || $_POST['password'] === '') { // if value !isset or blank
                     $ok = false;
                 } else {
                     $password = $_POST['password'];
                 };
-                if (!isset($_POST['role']) || $_POST['role'] === '') {
+                if (!isset($_POST['role']) || $_POST['role'] === '') { // if value !isset or blank
                     $ok = false;
                 } else {
                     $role = $_POST['role'];
                 };
-                if (!isset($_POST['color']) || $_POST['color'] === '') {
+                if (!isset($_POST['color']) || $_POST['color'] === '') { // if value !isset or blank
                     $ok = false;
                 } else {
                     $color = $_POST['color'];
                 };
-                if (!isset($_POST['languages']) || !is_array($_POST['languages']) ||
+                if (!isset($_POST['languages']) || !is_array($_POST['languages']) || // if value !isset or NOT and array or count is 0
                     count($_POST['languages']) === 0) {
                     $ok = false;
                 } else {
                     $languages = $_POST['languages'];
                 }
-                if (!isset($_POST['comments']) || $_POST['comments'] === '') {
+                if (!isset($_POST['comments']) || $_POST['comments'] === '') {| // if value !isset or count is 0
                     $ok = false;
                 } else {
                     $comments = $_POST['comments'];
                 };
-                if (!isset($_POST['tc']) || $_POST['tc'] === '') {
+                if (!isset($_POST['tc']) || $_POST['tc'] === '') {| // if value !isset or count is 0
                     $ok = false;
                 } else {
                     $tc = $_POST['tc'];
                 };
 
-                if ($ok) {
+                if ($ok) {|   // if $OK  is still true  ,print value
                     printf('<p>User name: %s
                     <br>Password: %s
                     <br>Role: %s
@@ -93,7 +99,7 @@
                     htmlspecialchars($comments),
                     htmlspecialchars($tc)
                     );
-                } else {
+                } else { // if $OK  is not true  ,print failure message
                     echo '<p>Validation failed.</p>';
                 }
 
@@ -103,6 +109,9 @@
         <form action="" method="post">
             <div class="mb-3">
                 User name: <input type="text" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                Email address : <input type="text" name="email" class="form-control">
             </div>
             <div class="mb-3">
                 Password: <input type="password" name="password" class="form-control">
