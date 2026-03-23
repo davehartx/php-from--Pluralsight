@@ -77,7 +77,7 @@
                     $tc = $_POST['tc'];
                 };
 
-                if ($ok) {|   // if $OK  is still true  ,print value
+                if ($ok) {  // if $OK  is still true  ,print value
                     printf('<p>User name: %s
                     <br>Password: %s
                     <br>Role: %s
@@ -101,9 +101,6 @@
         ?>
         <h1 class="mt-4">Registration</h1>
         <form action="" method="post">
-            <div class="mb-3">
-                User name: <input type="text" name="name" class="form-control">
-            </div>
             <div class="mb-3">
                 User name: <input type="text" name="name" class="form-control">
             </div>
