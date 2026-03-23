@@ -105,6 +105,23 @@
                     );
                 } else {
                     echo '<p>Validation failed.</p>';
+                    printf('<p>User name: %s 
+                    <br>Email: %s
+                    <br>Password: %s
+                    <br>Role: %s
+                    <br>Color: %s
+                    <br>Language(s): %s
+                    <br>Comments: %s
+                    <br>T&amp;C: %s</p>',
+                    htmlspecialchars($name),
+                    htmlspecialchars($email),
+                    htmlspecialchars($password),
+                    htmlspecialchars($role),
+                    htmlspecialchars($color),
+                    htmlspecialchars(implode(' ', $languages)),/* takes array  and converts  to a string , this is  space separated  this is a arrange and  just $languages barfs   */ 
+                    htmlspecialchars($comments),/* */
+                    htmlspecialchars($tc)
+                    );
                 }
 
             }
