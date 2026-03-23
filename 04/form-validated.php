@@ -46,6 +46,11 @@
                 } else {
                     $name = $_POST['name'];
                 };
+                if (!isset($_POST['email']) || $_POST['email'] === '') {
+                    $ok = false;
+                } else {
+                    $email = $_POST['email'];
+                };
                 if (!isset($_POST['password']) || $_POST['password'] === '') {
                     $ok = false;
                 } else {
@@ -103,7 +108,7 @@
         <h1 class="mt-4">Registration</h1>
         <form action="" method="post">
             <div class="mb-3">
-                User namez: <input type="text" name="name" class="form-control">
+                User name: <input type="text" name="name" class="form-control">
             </div>
             <div class="mb-3">
                 Email Addresss: <input type="text" name="email" class="form-control">
