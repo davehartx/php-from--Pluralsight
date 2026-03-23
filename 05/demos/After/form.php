@@ -33,6 +33,8 @@
             $password = '';
             $role = '';
             $color = '';
+            $x = '';
+            $countrows = '';
 
             if (isset($_POST['submit'])) { // do this is all validation  , see  04 for explanation 
                 $ok = true;
