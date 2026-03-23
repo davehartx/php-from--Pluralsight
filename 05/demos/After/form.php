@@ -58,7 +58,7 @@
                     $color = $_POST['color'];
                 };
 
-                //if ($ok) { //  so if OK  , we are all to the database that you will need to have set up ..  called php and name role and colour fields already set in table users
+                if ($ok) { //  so if OK  , we are all to the database that you will need to have set up ..  called php and name role and colour fields already set in table users
                  //   $db = mysqli_connect('localhost', 'root', 'Password123', 'php');  // see line69  .. this is used to get to the db
                  //   $sql = sprintf(       // see line 69  .. this is used to get to insert in to the db
                 //        "INSERT INTO users (name, role, color) VALUES ('%s', '%s', '%s')", // insert data  into db
