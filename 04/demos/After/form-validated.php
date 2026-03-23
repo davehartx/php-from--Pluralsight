@@ -50,12 +50,12 @@
                 } else {
                     $password = $_POST['password'];
                 };
-                if (!isset($_POST['role']) || $_POST['role'] === '') { // if value !isset or blank
+                if (!isset($_POST['role']) || $_POST['role'] === '') { // if value !isset or blank//
                     $ok = false;
                 } else {
                     $role = $_POST['role'];
                 };
-                if (!isset($_POST['color']) || $_POST['color'] === '') { // if value !isset or blank
+                if (!isset($_POST['color']) || $_POST['color'] === '') { // if value !isset or blank//
                     $ok = false;
                 } else {
                     $color = $_POST['color'];
@@ -66,18 +66,18 @@
                 } else {
                     $languages = $_POST['languages'];
                 }
-                if (!isset($_POST['comments']) || $_POST['comments'] === '') {| // if value !isset or count is 0
+                if (!isset($_POST['comments']) || $_POST['comments'] === '') { // if value !isset or count is 0 //
                     $ok = false;
                 } else {
                     $comments = $_POST['comments'];
                 };
-                if (!isset($_POST['tc']) || $_POST['tc'] === '') {| // if value !isset or count is 0
+                if (!isset($_POST['tc']) || $_POST['tc'] === '') { // if value !isset or count is //
                     $ok = false;
                 } else {
                     $tc = $_POST['tc'];
                 };
 
-                if ($ok) {  // if $OK  is still true  ,print value
+                if ($ok) {  // if $OK  is still true  ,print value//
                     printf('<p>User name: %s
                     <br>Password: %s
                     <br>Role: %s
